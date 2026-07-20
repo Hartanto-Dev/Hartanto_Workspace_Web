@@ -1,0 +1,299 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>DrewHub | Meeting Recaps</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="app-shell">
+      <button class="mobile-menu-button icon-button" id="mobile-menu-button" type="button" aria-label="Open navigation menu">
+        <i data-lucide="menu"></i>
+      </button>
+      <div class="sidebar-overlay" id="sidebar-overlay" aria-hidden="true"></div>
+      <aside class="sidebar" aria-label="Sidebar navigation">
+        <div class="sidebar-top">
+          <div class="brand-bar">
+            <div class="brand-logo" aria-hidden="true">
+              <span class="brand-mark">D</span>
+            </div>
+            <div>
+              <p class="brand-name">DrewHub</p>
+              <p class="brand-text">Meeting recaps</p>
+            </div>
+            <button
+              class="icon-button sidebar-toggle"
+              aria-label="Toggle sidebar"
+              type="button"
+            >
+              <i data-lucide="panel-left-close"></i>
+            </button>
+          </div>
+          <div class="search-group">
+            <i data-lucide="search" class="input-icon"></i>
+            <input
+              id="sidebar-search"
+              type="search"
+              placeholder="Search menu..."
+              aria-label="Search sidebar menu"
+            />
+          </div>
+        </div>
+
+        <nav class="sidebar-nav" aria-label="Primary">
+          <button class="nav-item active" data-section="dashboard" type="button">
+            <i data-lucide="layout-dashboard"></i>
+            <span>Dashboard</span>
+          </button>
+          <button class="nav-item" data-section="bookmarks" type="button">
+            <i data-lucide="bookmark"></i>
+            <span>Bookmarks</span>
+          </button>
+          <div class="sidebar-divider">
+            <span>MAIN MENU</span>
+          </div>
+          <button class="nav-item" data-section="action-items" type="button">
+            <i data-lucide="list-checks"></i>
+            <span>My Action Items</span>
+          </button>
+          <button class="nav-item active" data-section="all-meetings" type="button">
+            <i data-lucide="calendar-days"></i>
+            <span>All Meetings</span>
+          </button>
+          <div class="sidebar-divider">
+            <span>PROJECTS</span>
+          </div>
+          <button class="nav-item" data-section="client-projects" type="button">
+            <i data-lucide="briefcase-business"></i>
+            <span>Client Projects</span>
+          </button>
+          <button class="nav-item" data-section="system-development" type="button">
+            <i data-lucide="code-2"></i>
+            <span>System Development</span>
+          </button>
+          <button class="nav-item" data-section="events-committees" type="button">
+            <i data-lucide="party-popper"></i>
+            <span>Events & Committees</span>
+          </button>
+          <div class="sidebar-divider">
+            <span>CATEGORIES</span>
+          </div>
+          <button class="nav-item" data-section="tags" type="button">
+            <i data-lucide="tags"></i>
+            <span>Tags</span>
+          </button>
+          <button class="nav-item" data-section="weekly" type="button">
+            <i data-lucide="repeat-2"></i>
+            <span>Weekly Standup</span>
+          </button>
+          <button class="nav-item" data-section="design-review" type="button">
+            <i data-lucide="palette"></i>
+            <span>Design Review</span>
+          </button>
+          <button class="nav-item" data-section="client-brief" type="button">
+            <i data-lucide="file-text"></i>
+            <span>Client Brief</span>
+          </button>
+        </nav>
+
+        <div class="sidebar-bottom">
+          <button class="footer-item" type="button">
+            <i data-lucide="settings-2"></i>
+            <span>Settings</span>
+          </button>
+          <button class="footer-item" type="button">
+            <i data-lucide="bell"></i>
+            <span>Notifications</span>
+            <span class="notification-badge" aria-label="3 new notifications">3</span>
+          </button>
+          <div class="profile-card">
+            <img
+              src="https://images.unsplash.com/photo-1544723795-3fb6469f5b39?auto=format&fit=crop&w=140&q=80"
+              alt="User avatar"
+            />
+            <div>
+              <p class="profile-name">Mia Sanchez</p>
+              <p class="profile-role">Product Lead</p>
+            </div>
+            <button class="icon-button" aria-label="Open profile menu" type="button">
+              <i data-lucide="chevron-down"></i>
+            </button>
+          </div>
+        </div>
+      </aside>
+
+      <main class="main-content">
+        <header class="topbar">
+          <div>
+            <p class="eyebrow">Overview</p>
+            <h1>Meeting Recaps</h1>
+          </div>
+          <div class="topbar-actions">
+            <div class="search-group topbar-search">
+            <i data-lucide="search" class="input-icon"></i>
+              <input
+                id="main-search"
+                type="search"
+                placeholder="Search meeting recaps..."
+                aria-label="Search meeting recaps"
+              />
+            </div>
+            <button class="pill-button" id="filter-button" type="button" aria-haspopup="true" aria-expanded="false">
+              <i data-lucide="sliders-horizontal"></i>
+              Filter
+            </button>
+            <button class="primary-button" id="new-meeting-button" type="button">
+              <i data-lucide="plus"></i>
+              Add New Meeting
+            </button>
+          </div>
+        </header>
+
+        <section class="meeting-grid" aria-label="Meeting recap cards">
+          <article class="meeting-card" data-title="Sprint Planning" data-type="planning" data-description="Align priorities with design, engineering, and product stakeholders." tabindex="0">
+            <div class="meeting-card-header">
+              <div class="status-icon status-green">
+                <i data-lucide="mic"></i>
+              </div>
+              <span class="status-badge status-active">ACTIVE</span>
+            </div>
+            <div class="meeting-card-body">
+              <h2>Sprint Planning</h2>
+              <p class="meeting-date">June 24, 2026</p>
+              <p class="meeting-description">Align priorities with design, engineering, and product stakeholders.</p>
+            </div>
+            <div class="meeting-card-footer">
+              <span>12 participants</span>
+              <button class="icon-button small" aria-label="Open Sprint Planning details" type="button">
+                <i data-lucide="arrow-up-right"></i>
+              </button>
+            </div>
+          </article>
+
+          <article class="meeting-card" data-title="Design Review" data-type="review" data-description="Review interface updates and component feedback for the new landing page." tabindex="0">
+            <div class="meeting-card-header">
+              <div class="status-icon status-blue">
+                <i data-lucide="palette"></i>
+              </div>
+              <span class="status-badge status-draft">DRAFT</span>
+            </div>
+            <div class="meeting-card-body">
+              <h2>Design Review</h2>
+              <p class="meeting-date">June 22, 2026</p>
+              <p class="meeting-description">Review interface updates and component feedback for the new landing page.</p>
+            </div>
+            <div class="meeting-card-footer">
+              <span>8 participants</span>
+              <button class="icon-button small" aria-label="Open Design Review details" type="button">
+                <i data-lucide="arrow-up-right"></i>
+              </button>
+            </div>
+          </article>
+
+          <article class="meeting-card" data-title="Client Kickoff" data-type="kickoff" data-description="Kickoff conversation for the new client dashboard initiative." tabindex="0">
+            <div class="meeting-card-header">
+              <div class="status-icon status-orange">
+                <i data-lucide="workflow"></i>
+              </div>
+              <span class="status-badge status-active">ACTIVE</span>
+            </div>
+            <div class="meeting-card-body">
+              <h2>Client Kickoff</h2>
+              <p class="meeting-date">June 18, 2026</p>
+              <p class="meeting-description">Kickoff conversation for the new client dashboard initiative.</p>
+            </div>
+            <div class="meeting-card-footer">
+              <span>16 participants</span>
+              <button class="icon-button small" aria-label="Open Client Kickoff details" type="button">
+                <i data-lucide="arrow-up-right"></i>
+              </button>
+            </div>
+          </article>
+
+          <article class="meeting-card" data-title="Weekly Sync" data-type="planning" data-description="Weekly sync to track project health and open blockers across teams." tabindex="0">
+            <div class="meeting-card-header">
+              <div class="status-icon status-green">
+                <i data-lucide="calendar"></i>
+              </div>
+              <span class="status-badge status-active">ACTIVE</span>
+            </div>
+            <div class="meeting-card-body">
+              <h2>Weekly Sync</h2>
+              <p class="meeting-date">June 14, 2026</p>
+              <p class="meeting-description">Weekly sync to track project health and open blockers across teams.</p>
+            </div>
+            <div class="meeting-card-footer">
+              <span>10 participants</span>
+              <button class="icon-button small" aria-label="Open Weekly Sync details" type="button">
+                <i data-lucide="arrow-up-right"></i>
+              </button>
+            </div>
+          </article>
+
+          <article class="meeting-card" data-title="Client Brief" data-type="kickoff" data-description="Discuss delivery milestones and alignment for the client success plan." tabindex="0">
+            <div class="meeting-card-header">
+              <div class="status-icon status-red">
+                <i data-lucide="file"></i>
+              </div>
+              <span class="status-badge status-draft">DRAFT</span>
+            </div>
+            <div class="meeting-card-body">
+              <h2>Client Brief</h2>
+              <p class="meeting-date">June 10, 2026</p>
+              <p class="meeting-description">Discuss delivery milestones and alignment for the client success plan.</p>
+            </div>
+            <div class="meeting-card-footer">
+              <span>6 participants</span>
+              <button class="icon-button small" aria-label="Open Client Brief details" type="button">
+                <i data-lucide="arrow-up-right"></i>
+              </button>
+            </div>
+          </article>
+
+          <button class="add-card" id="create-meeting-card" type="button" aria-label="Create new meeting recap">
+            <div class="add-card-inner">
+              <div class="add-icon">
+              <i data-lucide="plus"></i>
+              </div>
+              <p>Create New Meeting</p>
+            </div>
+          </button>
+        </section>
+      </main>
+    </div>
+
+    <div class="filter-dropdown" id="filter-dropdown" aria-label="Filter options" hidden>
+      <div class="filter-panel">
+        <h2>Filter recaps</h2>
+        <div class="filter-field">
+          <label for="status-filter">Status</label>
+          <select id="status-filter" aria-label="Filter by status">
+            <option value="all">All statuses</option>
+            <option value="active">Active</option>
+            <option value="draft">Draft</option>
+          </select>
+        </div>
+        <div class="filter-field">
+          <label for="type-filter">Type</label>
+          <select id="type-filter" aria-label="Filter by type">
+            <option value="all">All types</option>
+            <option value="planning">Planning</option>
+            <option value="review">Review</option>
+            <option value="kickoff">Kickoff</option>
+          </select>
+        </div>
+        <button class="secondary-button" id="apply-filter" type="button">Apply filter</button>
+      </div>
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>
