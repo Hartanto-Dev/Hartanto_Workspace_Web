@@ -7,7 +7,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
-      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap"
       rel="stylesheet"
     />
     <script src="https://unpkg.com/lucide@latest"></script>
@@ -19,6 +19,7 @@
         <i data-lucide="menu"></i>
       </button>
       <div class="sidebar-overlay" id="sidebar-overlay" aria-hidden="true"></div>
+
       <aside class="sidebar" aria-label="Sidebar navigation">
         <div class="sidebar-top">
           <div class="brand-bar">
@@ -37,6 +38,7 @@
               <i data-lucide="panel-left-close"></i>
             </button>
           </div>
+
           <div class="search-group">
             <i data-lucide="search" class="input-icon"></i>
             <input
@@ -46,63 +48,63 @@
               aria-label="Search sidebar menu"
             />
           </div>
-        </div>
 
-        <nav class="sidebar-nav" aria-label="Primary">
-          <button class="nav-item active" data-section="dashboard" type="button">
-            <i data-lucide="layout-dashboard"></i>
-            <span>Dashboard</span>
-          </button>
-          <button class="nav-item" data-section="bookmarks" type="button">
-            <i data-lucide="bookmark"></i>
-            <span>Bookmarks</span>
-          </button>
-          <div class="sidebar-divider">
-            <span>MAIN MENU</span>
-          </div>
-          <button class="nav-item" data-section="action-items" type="button">
-            <i data-lucide="list-checks"></i>
-            <span>My Action Items</span>
-          </button>
-          <button class="nav-item active" data-section="all-meetings" type="button">
-            <i data-lucide="calendar-days"></i>
-            <span>All Meetings</span>
-          </button>
-          <div class="sidebar-divider">
-            <span>PROJECTS</span>
-          </div>
-          <button class="nav-item" data-section="client-projects" type="button">
-            <i data-lucide="briefcase-business"></i>
-            <span>Client Projects</span>
-          </button>
-          <button class="nav-item" data-section="system-development" type="button">
-            <i data-lucide="code-2"></i>
-            <span>System Development</span>
-          </button>
-          <button class="nav-item" data-section="events-committees" type="button">
-            <i data-lucide="party-popper"></i>
-            <span>Events & Committees</span>
-          </button>
-          <div class="sidebar-divider">
-            <span>CATEGORIES</span>
-          </div>
-          <button class="nav-item" data-section="tags" type="button">
-            <i data-lucide="tags"></i>
-            <span>Tags</span>
-          </button>
-          <button class="nav-item" data-section="weekly" type="button">
-            <i data-lucide="repeat-2"></i>
-            <span>Weekly Standup</span>
-          </button>
-          <button class="nav-item" data-section="design-review" type="button">
-            <i data-lucide="palette"></i>
-            <span>Design Review</span>
-          </button>
-          <button class="nav-item" data-section="client-brief" type="button">
-            <i data-lucide="file-text"></i>
-            <span>Client Brief</span>
-          </button>
-        </nav>
+          <nav class="sidebar-nav" aria-label="Primary">
+            <button class="nav-item active" data-section="dashboard" type="button">
+              <i data-lucide="layout-dashboard"></i>
+              <span>Dashboard</span>
+            </button>
+            <button class="nav-item" data-section="bookmarks" type="button">
+              <i data-lucide="bookmark"></i>
+              <span>Bookmarks</span>
+            </button>
+            <div class="sidebar-divider">
+              <span>MAIN MENU</span>
+            </div>
+            <button class="nav-item" data-section="action-items" type="button">
+              <i data-lucide="list-checks"></i>
+              <span>My Action Items</span>
+            </button>
+            <button class="nav-item active" data-section="all-meetings" type="button">
+              <i data-lucide="calendar-days"></i>
+              <span>All Meetings</span>
+            </button>
+            <div class="sidebar-divider">
+              <span>PROJECTS</span>
+            </div>
+            <button class="nav-item" data-section="client-projects" type="button">
+              <i data-lucide="briefcase-business"></i>
+              <span>Client Projects</span>
+            </button>
+            <button class="nav-item" data-section="system-development" type="button">
+              <i data-lucide="code-2"></i>
+              <span>System Development</span>
+            </button>
+            <button class="nav-item" data-section="events-committees" type="button">
+              <i data-lucide="party-popper"></i>
+              <span>Events & Committees</span>
+            </button>
+            <div class="sidebar-divider">
+              <span>CATEGORIES</span>
+            </div>
+            <button class="nav-item" data-section="tags" type="button">
+              <i data-lucide="tags"></i>
+              <span>Tags</span>
+            </button>
+            <button class="nav-item" data-section="weekly" type="button">
+              <i data-lucide="repeat-2"></i>
+              <span>Weekly Standup</span>
+            </button>
+            <button class="nav-item" data-section="design-review" type="button">
+              <i data-lucide="palette"></i>
+              <span>Design Review</span>
+            </button>
+            <button class="nav-item" data-section="client-brief" type="button">
+              <i data-lucide="file-text"></i>
+              <span>Client Brief</span>
+            </button>
+          </nav>
+        </div>
 
         <div class="sidebar-bottom">
           <button class="footer-item" type="button">
@@ -123,7 +125,7 @@
               <p class="profile-name">Mia Sanchez</p>
               <p class="profile-role">Product Lead</p>
             </div>
-            <button class="icon-button" aria-label="Open profile menu" type="button">
+            <button class="icon-button" aria-label="Open profile menu" type="button" style="margin-left: auto;">
               <i data-lucide="chevron-down"></i>
             </button>
           </div>
@@ -138,7 +140,7 @@
           </div>
           <div class="topbar-actions">
             <div class="search-group topbar-search">
-            <i data-lucide="search" class="input-icon"></i>
+              <i data-lucide="search" class="input-icon"></i>
               <input
                 id="main-search"
                 type="search"
@@ -150,6 +152,29 @@
               <i data-lucide="sliders-horizontal"></i>
               Filter
             </button>
+            <div class="filter-dropdown" id="filter-dropdown" aria-label="Filter options" hidden>
+              <div class="filter-panel">
+                <h2>Filter recaps</h2>
+                <div class="filter-field">
+                  <label for="status-filter">Status</label>
+                  <select id="status-filter" aria-label="Filter by status">
+                    <option value="all">All statuses</option>
+                    <option value="active">Active</option>
+                    <option value="draft">Draft</option>
+                  </select>
+                </div>
+                <div class="filter-field">
+                  <label for="type-filter">Type</label>
+                  <select id="type-filter" aria-label="Filter by type">
+                    <option value="all">All types</option>
+                    <option value="planning">Planning</option>
+                    <option value="review">Review</option>
+                    <option value="kickoff">Kickoff</option>
+                  </select>
+                </div>
+                <button class="secondary-button" id="apply-filter" type="button">Apply filter</button>
+              </div>
+            </div>
             <button class="primary-button" id="new-meeting-button" type="button">
               <i data-lucide="plus"></i>
               Add New Meeting
@@ -261,37 +286,13 @@
           <button class="add-card" id="create-meeting-card" type="button" aria-label="Create new meeting recap">
             <div class="add-card-inner">
               <div class="add-icon">
-              <i data-lucide="plus"></i>
+                <i data-lucide="plus"></i>
               </div>
               <p>Create New Meeting</p>
             </div>
           </button>
         </section>
       </main>
-    </div>
-
-    <div class="filter-dropdown" id="filter-dropdown" aria-label="Filter options" hidden>
-      <div class="filter-panel">
-        <h2>Filter recaps</h2>
-        <div class="filter-field">
-          <label for="status-filter">Status</label>
-          <select id="status-filter" aria-label="Filter by status">
-            <option value="all">All statuses</option>
-            <option value="active">Active</option>
-            <option value="draft">Draft</option>
-          </select>
-        </div>
-        <div class="filter-field">
-          <label for="type-filter">Type</label>
-          <select id="type-filter" aria-label="Filter by type">
-            <option value="all">All types</option>
-            <option value="planning">Planning</option>
-            <option value="review">Review</option>
-            <option value="kickoff">Kickoff</option>
-          </select>
-        </div>
-        <button class="secondary-button" id="apply-filter" type="button">Apply filter</button>
-      </div>
     </div>
 
     <script src="script.js"></script>
