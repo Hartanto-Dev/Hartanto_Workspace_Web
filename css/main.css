@@ -5,7 +5,7 @@
 /* Pages */
 @import "pages/dashboard.css";
 @import "pages/meetings.css";
-@import "pages/bookmarks.css";
+/* Bookmarks renamed to Reporting, which uses kanban styles and base components */
 @import "pages/action-items.css";
 @import "pages/projects.css";
 @import "pages/kanban.css";
