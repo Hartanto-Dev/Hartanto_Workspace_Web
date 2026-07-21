@@ -51,21 +51,28 @@
     </div>
   </div>
 
-  <div class="dev-column" style="background: linear-gradient(180deg, rgba(139, 92, 246, 0.05) 0%, rgba(139, 92, 246, 0.02) 100%); border-color: rgba(139, 92, 246, 0.3);">
+  <div class="dev-column" id="col-ai" style="background: linear-gradient(180deg, rgba(139, 92, 246, 0.05) 0%, rgba(139, 92, 246, 0.02) 100%); border-color: rgba(139, 92, 246, 0.3);">
     <h3 class="column-title" style="color: #6d28d9;"><span class="column-dot" style="background:#8b5cf6;"></span>AI Recaption</h3>
-    <div class="dev-task-card" style="border: 1px solid rgba(139, 92, 246, 0.2); background: rgba(255, 255, 255, 0.9);">
-      <div style="display: flex; align-items: center; gap: 8px; margin-bottom: 8px;">
-        <i data-lucide="sparkles" style="color: #8b5cf6; width: 16px; height: 16px;"></i>
-        <p class="dev-task-title" style="margin: 0; color: #6d28d9;">Smart Insight</p>
+    <div id="ai-recap-content" style="display: flex; flex-direction: column; gap: 14px;">
+      <div class="dev-task-card" style="border: 1px solid rgba(139, 92, 246, 0.2); background: rgba(255, 255, 255, 0.9);">
+        <div style="display: flex; align-items: center; gap: 8px; margin-bottom: 8px;">
+          <i data-lucide="sparkles" style="color: #8b5cf6; width: 16px; height: 16px;"></i>
+          <p class="dev-task-title" style="margin: 0; color: #6d28d9;">Smart Insight</p>
+        </div>
+        <p style="margin: 0; font-size: 0.85rem; color: #475569; line-height: 1.5;">Based on current metrics, <strong>velocity has increased by 14%</strong> this sprint. Recommend prioritizing the "Client presentation deck" to meet the upcoming Thursday deadline.</p>
       </div>
-      <p style="margin: 0; font-size: 0.85rem; color: #475569; line-height: 1.5;">Based on current metrics, <strong>velocity has increased by 14%</strong> this sprint. Recommend prioritizing the "Client presentation deck" to meet the upcoming Thursday deadline.</p>
-    </div>
-    <div class="dev-task-card" style="border: 1px solid rgba(139, 92, 246, 0.2); background: rgba(255, 255, 255, 0.9);">
-      <div style="display: flex; align-items: center; gap: 8px; margin-bottom: 8px;">
-        <i data-lucide="zap" style="color: #8b5cf6; width: 16px; height: 16px;"></i>
-        <p class="dev-task-title" style="margin: 0; color: #6d28d9;">Risk Alert</p>
+      <div class="dev-task-card" style="border: 1px solid rgba(139, 92, 246, 0.2); background: rgba(255, 255, 255, 0.9);">
+        <div style="display: flex; align-items: center; gap: 8px; margin-bottom: 8px;">
+          <i data-lucide="zap" style="color: #8b5cf6; width: 16px; height: 16px;"></i>
+          <p class="dev-task-title" style="margin: 0; color: #6d28d9;">Risk Alert</p>
+        </div>
+        <p style="margin: 0; font-size: 0.85rem; color: #475569; line-height: 1.5;">Financial summary export has been in To-Do for 3 days. High priority flag indicates it needs immediate attention.</p>
       </div>
-      <p style="margin: 0; font-size: 0.85rem; color: #475569; line-height: 1.5;">Financial summary export has been in To-Do for 3 days. High priority flag indicates it needs immediate attention.</p>
     </div>
+    
+    <button class="primary-button" id="generate-recap-button" type="button" style="margin-top: auto; background: #8b5cf6; box-shadow: 0 4px 14px rgba(139, 92, 246, 0.25);">
+      <i data-lucide="wand-2"></i>
+      Generate Recap
+    </button>
   </div>
 </div>

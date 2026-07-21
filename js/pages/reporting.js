@@ -67,4 +67,59 @@ export function initReporting(container) {
       }
     });
   });
+
+  // --- Generate Recap Logic ---
+  const generateRecapButton = container.querySelector('#generate-recap-button');
+  const aiRecapContent = container.querySelector('#ai-recap-content');
+  const inprogressColumn = container.querySelector('#col-inprogress');
+  const doneColumn = container.querySelector('#col-done');
+
+  if (generateRecapButton && aiRecapContent) {
+    generateRecapButton.addEventListener('click', () => {
+      // Add loading state
+      const originalText = generateRecapButton.innerHTML;
+      generateRecapButton.innerHTML = `<i data-lucide="loader-2" style="animation: spin 1s linear infinite;"></i> Generating...`;
+      generateRecapButton.style.opacity = '0.7';
+      generateRecapButton.disabled = true;
+      lucide.createIcons();
+
+      setTimeout(() => {
+        // Collect task counts/titles
+        const todoTasks = todoColumn ? todoColumn.querySelectorAll('.dev-task-card').length : 0;
+        const progressTasks = inprogressColumn ? Array.from(inprogressColumn.querySelectorAll('.dev-task-title')).map(el => el.textContent) : [];
+        const doneTasks = doneColumn ? Array.from(doneColumn.querySelectorAll('.dev-task-title')).map(el => el.textContent) : [];
+
+        let recapMessage = `We currently have <strong>${todoTasks} tasks</strong> waiting in the To-Do queue. `;
+        
+        if (progressTasks.length > 0) {
+          recapMessage += `Our main focus right now is on <em>${progressTasks[0]}</em>. `;
+        }
+        
+        if (doneTasks.length > 0) {
+          recapMessage += `Great job completing <em>${doneTasks[0]}</em> recently!`;
+        } else {
+          recapMessage += `Let's keep pushing to get tasks across the finish line!`;
+        }
+
+        // Generate new recap card
+        aiRecapContent.innerHTML = `
+          <div class="dev-task-card" style="border: 1px solid rgba(139, 92, 246, 0.4); background: rgba(255, 255, 255, 0.95); animation: fadeInPage 0.4s ease;">
+            <div style="display: flex; align-items: center; gap: 8px; margin-bottom: 8px;">
+              <i data-lucide="bot" style="color: #8b5cf6; width: 18px; height: 18px;"></i>
+              <p class="dev-task-title" style="margin: 0; color: #6d28d9; font-weight: 700;">Latest Recap</p>
+            </div>
+            <p style="margin: 0; font-size: 0.85rem; color: #334155; line-height: 1.6;">${recapMessage}</p>
+          </div>
+        `;
+        
+        lucide.createIcons();
+        
+        // Restore button state
+        generateRecapButton.innerHTML = originalText;
+        generateRecapButton.style.opacity = '1';
+        generateRecapButton.disabled = false;
+        lucide.createIcons();
+      }, 1500); // Simulate network request delay
+    });
+  }
 }
