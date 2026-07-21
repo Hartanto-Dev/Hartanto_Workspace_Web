@@ -47,6 +47,22 @@
   box-shadow: var(--shadow);
 }
 
+.dev-task-card.dragging {
+  opacity: 0.5;
+  transform: scale(0.98);
+  box-shadow: none;
+  cursor: grabbing;
+}
+
+.dev-task-card[draggable="true"] {
+  cursor: grab;
+}
+
+.dev-column.drag-over {
+  background: rgba(37, 99, 235, 0.05);
+  border-color: var(--primary-accent);
+}
+
 .dev-task-title {
   margin: 0;
   font-weight: 600;

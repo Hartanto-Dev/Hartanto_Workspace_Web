@@ -52,6 +52,9 @@ export function initNavigation() {
     } else if (sectionName === 'action-items') {
       const module = await import('./pages/action-items.js');
       module.initActionItems(container);
+    } else if (sectionName === 'reporting') {
+      const module = await import('./pages/reporting.js');
+      module.initReporting(container);
     }
   };
 

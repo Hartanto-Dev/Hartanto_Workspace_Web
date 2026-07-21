@@ -3,43 +3,49 @@
     <p class="eyebrow">Analytics</p>
     <h1>Reporting</h1>
   </div>
+  <div class="topbar-actions">
+    <button class="primary-button" id="add-task-button" type="button">
+      <i data-lucide="plus"></i>
+      Add Task
+    </button>
+  </div>
 </header>
 <div class="dev-board">
-  <div class="dev-column">
+  <div class="dev-column" id="col-todo" data-status="todo">
     <h3 class="column-title"><span class="column-dot" style="background:#3b82f6;"></span>To-Do</h3>
-    <div class="dev-task-card">
+    <div class="dev-task-card" draggable="true">
       <p class="dev-task-title">Generate weekly analytics report</p>
       <span class="priority-tag medium">Medium</span>
     </div>
-    <div class="dev-task-card">
+    <div class="dev-task-card" draggable="true">
       <p class="dev-task-title">Review user engagement metrics</p>
       <span class="priority-tag low">Low</span>
     </div>
-    <div class="dev-task-card">
+    <div class="dev-task-card" draggable="true">
       <p class="dev-task-title">Export Q2 financial summary</p>
       <span class="priority-tag high">High</span>
     </div>
   </div>
 
-  <div class="dev-column">
+  <div class="dev-column" id="col-inprogress" data-status="inprogress">
     <h3 class="column-title"><span class="column-dot" style="background:#f59e0b;"></span>On-Progress</h3>
-    <div class="dev-task-card">
+    <div class="dev-task-card" draggable="true">
       <p class="dev-task-title">Compile sprint velocity data</p>
       <span class="priority-tag high">High</span>
     </div>
-    <div class="dev-task-card">
+    <div class="dev-task-card" draggable="true">
       <p class="dev-task-title">Draft client presentation deck</p>
       <span class="priority-tag medium">Medium</span>
     </div>
   </div>
 
-  <div class="dev-column">
+  <div class="dev-column" id="col-done" data-status="done">
     <h3 class="column-title"><span class="column-dot" style="background:#10b981;"></span>Done</h3>
-    <div class="dev-task-card">
+    <div class="dev-task-card" draggable="true">
       <p class="dev-task-title">Monthly server cost analysis</p>
       <span class="priority-tag low">Low</span>
     </div>
-    <div class="dev-task-card">
+    <div class="dev-task-card" draggable="true">
       <p class="dev-task-title">Customer feedback synthesis</p>
       <span class="priority-tag medium">Medium</span>
     </div>
