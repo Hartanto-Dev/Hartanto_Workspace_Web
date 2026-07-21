@@ -1,0 +1,132 @@
+<header class="topbar">
+  <div>
+    <p class="eyebrow">Overview</p>
+    <h1>Meeting Recaps</h1>
+  </div>
+  <div class="topbar-actions">
+    <div class="search-group topbar-search">
+      <i data-lucide="search" class="input-icon"></i>
+      <input id="main-search" type="search" placeholder="Search meeting recaps..." aria-label="Search meeting recaps" />
+    </div>
+    <button class="pill-button" id="filter-button" type="button" aria-haspopup="true" aria-expanded="false">
+      <i data-lucide="sliders-horizontal"></i>
+      Filter
+    </button>
+    <div class="filter-dropdown" id="filter-dropdown" aria-label="Filter options" hidden>
+      <div class="filter-panel">
+        <h2>Filter recaps</h2>
+        <div class="filter-field">
+          <label for="status-filter">Status</label>
+          <select id="status-filter" aria-label="Filter by status">
+            <option value="all">All statuses</option>
+            <option value="active">Active</option>
+            <option value="draft">Draft</option>
+          </select>
+        </div>
+        <div class="filter-field">
+          <label for="type-filter">Type</label>
+          <select id="type-filter" aria-label="Filter by type">
+            <option value="all">All types</option>
+            <option value="planning">Planning</option>
+            <option value="review">Review</option>
+            <option value="kickoff">Kickoff</option>
+          </select>
+        </div>
+        <button class="secondary-button" id="apply-filter" type="button">Apply filter</button>
+      </div>
+    </div>
+    <button class="primary-button" id="new-meeting-button" type="button">
+      <i data-lucide="plus"></i>
+      Add New Meeting
+    </button>
+  </div>
+</header>
+
+<section class="meeting-grid" aria-label="Meeting recap cards">
+  <article class="meeting-card" data-title="Sprint Planning" data-type="planning" data-description="Align priorities with design, engineering, and product stakeholders." tabindex="0">
+    <div class="meeting-card-header">
+      <div class="status-icon status-green"><i data-lucide="mic"></i></div>
+      <span class="status-badge status-active">ACTIVE</span>
+    </div>
+    <div class="meeting-card-body">
+      <h2>Sprint Planning</h2>
+      <p class="meeting-date">June 24, 2026</p>
+      <p class="meeting-description">Align priorities with design, engineering, and product stakeholders.</p>
+    </div>
+    <div class="meeting-card-footer">
+      <span>12 participants</span>
+      <button class="icon-button small" aria-label="Open Sprint Planning details" type="button"><i data-lucide="arrow-up-right"></i></button>
+    </div>
+  </article>
+
+  <article class="meeting-card" data-title="Design Review" data-type="review" data-description="Review interface updates and component feedback for the new landing page." tabindex="0">
+    <div class="meeting-card-header">
+      <div class="status-icon status-blue"><i data-lucide="palette"></i></div>
+      <span class="status-badge status-draft">DRAFT</span>
+    </div>
+    <div class="meeting-card-body">
+      <h2>Design Review</h2>
+      <p class="meeting-date">June 22, 2026</p>
+      <p class="meeting-description">Review interface updates and component feedback for the new landing page.</p>
+    </div>
+    <div class="meeting-card-footer">
+      <span>8 participants</span>
+      <button class="icon-button small" aria-label="Open Design Review details" type="button"><i data-lucide="arrow-up-right"></i></button>
+    </div>
+  </article>
+
+  <article class="meeting-card" data-title="Client Kickoff" data-type="kickoff" data-description="Kickoff conversation for the new client dashboard initiative." tabindex="0">
+    <div class="meeting-card-header">
+      <div class="status-icon status-orange"><i data-lucide="workflow"></i></div>
+      <span class="status-badge status-active">ACTIVE</span>
+    </div>
+    <div class="meeting-card-body">
+      <h2>Client Kickoff</h2>
+      <p class="meeting-date">June 18, 2026</p>
+      <p class="meeting-description">Kickoff conversation for the new client dashboard initiative.</p>
+    </div>
+    <div class="meeting-card-footer">
+      <span>16 participants</span>
+      <button class="icon-button small" aria-label="Open Client Kickoff details" type="button"><i data-lucide="arrow-up-right"></i></button>
+    </div>
+  </article>
+
+  <article class="meeting-card" data-title="Weekly Sync" data-type="planning" data-description="Weekly sync to track project health and open blockers across teams." tabindex="0">
+    <div class="meeting-card-header">
+      <div class="status-icon status-green"><i data-lucide="calendar"></i></div>
+      <span class="status-badge status-active">ACTIVE</span>
+    </div>
+    <div class="meeting-card-body">
+      <h2>Weekly Sync</h2>
+      <p class="meeting-date">June 14, 2026</p>
+      <p class="meeting-description">Weekly sync to track project health and open blockers across teams.</p>
+    </div>
+    <div class="meeting-card-footer">
+      <span>10 participants</span>
+      <button class="icon-button small" aria-label="Open Weekly Sync details" type="button"><i data-lucide="arrow-up-right"></i></button>
+    </div>
+  </article>
+
+  <article class="meeting-card" data-title="Client Brief" data-type="kickoff" data-description="Discuss delivery milestones and alignment for the client success plan." tabindex="0">
+    <div class="meeting-card-header">
+      <div class="status-icon status-red"><i data-lucide="file"></i></div>
+      <span class="status-badge status-draft">DRAFT</span>
+    </div>
+    <div class="meeting-card-body">
+      <h2>Client Brief</h2>
+      <p class="meeting-date">June 10, 2026</p>
+      <p class="meeting-description">Discuss delivery milestones and alignment for the client success plan.</p>
+    </div>
+    <div class="meeting-card-footer">
+      <span>6 participants</span>
+      <button class="icon-button small" aria-label="Open Client Brief details" type="button"><i data-lucide="arrow-up-right"></i></button>
+    </div>
+  </article>
+
+  <button class="add-card" id="create-meeting-card" type="button" aria-label="Create new meeting recap">
+    <div class="add-card-inner">
+      <div class="add-icon"><i data-lucide="plus"></i></div>
+      <p>Create New Meeting</p>
+    </div>
+  </button>
+</section>

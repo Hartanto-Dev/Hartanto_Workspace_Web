@@ -1,0 +1,308 @@
+.pill-button,
+.secondary-button,
+.primary-button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  border-radius: 12px;
+  padding: 10px 18px;
+  font-weight: 600;
+  font-size: 0.9rem;
+  transition: transform var(--transition), box-shadow var(--transition), background var(--transition);
+}
+
+.pill-button {
+  background: #ffffff;
+  color: var(--text);
+  border: 1px solid var(--border);
+  box-shadow: var(--shadow-soft);
+}
+
+.pill-button:hover {
+  background: rgba(248, 250, 252, 0.9);
+  border-color: rgba(203, 213, 225, 0.9);
+}
+
+.secondary-button {
+  width: 100%;
+  background: rgba(241, 245, 249, 0.9);
+  color: var(--text);
+  border: 1px solid var(--border);
+}
+
+.secondary-button:hover {
+  background: rgba(226, 232, 240, 0.9);
+}
+
+.primary-button {
+  background: var(--primary-accent);
+  color: #ffffff;
+  box-shadow: 0 4px 14px rgba(37, 99, 235, 0.25);
+}
+
+.primary-button:hover {
+  background: #1d4ed8;
+  transform: translateY(-1px);
+  box-shadow: 0 6px 20px rgba(37, 99, 235, 0.35);
+}
+
+.primary-button i,
+.pill-button i,
+.secondary-button i {
+  width: 18px;
+  height: 18px;
+}
+
+.meeting-grid {
+  display: grid;
+  gap: 20px;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+}
+
+.meeting-card,
+.add-card {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  min-height: 220px;
+  padding: 22px;
+  border-radius: 18px;
+  background: #ffffff;
+  border: 1px solid var(--border);
+  box-shadow: var(--shadow-soft);
+  transition: transform var(--transition), box-shadow var(--transition), border-color var(--transition);
+}
+
+.add-card {
+  width: 100%;
+  color: inherit;
+  text-align: inherit;
+}
+
+.meeting-card:hover,
+.add-card:hover {
+  transform: translateY(-3px);
+  box-shadow: var(--shadow);
+  border-color: rgba(37, 99, 235, 0.3);
+}
+
+.meeting-card-header,
+.meeting-card-footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 12px;
+}
+
+.status-icon {
+  width: 40px;
+  height: 40px;
+  border-radius: 12px;
+  display: grid;
+  place-items: center;
+  color: white;
+  flex-shrink: 0;
+}
+
+.status-icon i {
+  width: 20px;
+  height: 20px;
+}
+
+.status-icon.status-green {
+  background: linear-gradient(135deg, #10b981, #059669);
+}
+
+.status-icon.status-blue {
+  background: linear-gradient(135deg, #3b82f6, #2563eb);
+}
+
+.status-icon.status-orange {
+  background: linear-gradient(135deg, #f59e0b, #d97706);
+}
+
+.status-icon.status-red {
+  background: linear-gradient(135deg, #ef4444, #dc2626);
+}
+
+.status-badge {
+  padding: 4px 10px;
+  border-radius: 999px;
+  font-size: 0.7rem;
+  font-weight: 700;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+}
+
+.status-active {
+  color: #065f46;
+  background: rgba(16, 185, 129, 0.12);
+}
+
+.status-draft {
+  color: #475569;
+  background: rgba(100, 116, 139, 0.12);
+}
+
+.meeting-card-body {
+  margin: 14px 0;
+}
+
+.meeting-card-body h2 {
+  margin: 0 0 4px;
+  font-size: 1.15rem;
+  font-weight: 700;
+  letter-spacing: -0.01em;
+}
+
+.meeting-date {
+  margin: 0 0 10px;
+  color: var(--muted);
+  font-size: 0.85rem;
+}
+
+.meeting-description {
+  margin: 0;
+  color: #475569;
+  font-size: 0.9rem;
+  line-height: 1.5;
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+.meeting-card-footer {
+  padding-top: 14px;
+  border-top: 1px solid rgba(241, 245, 249, 0.9);
+}
+
+.meeting-card-footer span {
+  color: var(--muted);
+  font-size: 0.85rem;
+  font-weight: 500;
+}
+
+.icon-button.small {
+  width: 32px;
+  height: 32px;
+  border-radius: 10px;
+  background: rgba(241, 245, 249, 0.9);
+}
+
+.icon-button.small i {
+  width: 16px;
+  height: 16px;
+}
+
+.add-card {
+  justify-content: center;
+  border-style: dashed;
+  border-color: rgba(203, 213, 225, 0.9);
+  background: rgba(248, 250, 252, 0.5);
+}
+
+.add-card-inner {
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 12px;
+}
+
+.add-icon {
+  width: 52px;
+  height: 52px;
+  border-radius: 16px;
+  border: 2px dashed rgba(37, 99, 235, 0.3);
+  display: grid;
+  place-items: center;
+  color: var(--primary-accent);
+  background: rgba(37, 99, 235, 0.05);
+}
+
+.add-icon i {
+  width: 24px;
+  height: 24px;
+}
+
+.add-card p {
+  margin: 0;
+  font-weight: 600;
+  font-size: 0.95rem;
+  color: var(--text);
+}
+
+.filter-dropdown {
+  position: absolute;
+  top: calc(100% + 8px);
+  right: 0;
+  width: 300px;
+  z-index: 50;
+}
+
+.filter-panel {
+  background: #ffffff;
+  border-radius: 16px;
+  padding: 20px;
+  border: 1px solid var(--border);
+  box-shadow: var(--shadow);
+}
+
+.filter-panel h2 {
+  margin: 0 0 14px;
+  font-size: 1rem;
+  font-weight: 700;
+}
+
+.filter-field {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  margin-bottom: 14px;
+}
+
+.filter-field label {
+  color: var(--muted);
+  font-size: 0.825rem;
+  font-weight: 600;
+}
+
+.filter-field select {
+  width: 100%;
+  padding: 10px 12px;
+  border-radius: 10px;
+  border: 1px solid var(--border);
+  background: rgba(248, 250, 252, 0.9);
+  color: var(--text);
+}
+
+.ripple {
+  position: absolute;
+  border-radius: 50%;
+  pointer-events: none;
+  background: rgba(37, 99, 235, 0.2);
+  transform: scale(0);
+  animation: ripple 0.6s linear;
+}
+
+@keyframes ripple {
+  to {
+    opacity: 0;
+    transform: scale(4);
+  }
+}
+
+.create-active {
+  animation: create-pop 0.4s ease;
+}
+
+@keyframes create-pop {
+  50% {
+    border-color: var(--green);
+    background: rgba(16, 185, 129, 0.1);
+    transform: scale(0.98);
+  }
+}

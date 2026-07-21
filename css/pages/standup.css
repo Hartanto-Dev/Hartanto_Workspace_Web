@@ -1,0 +1,53 @@
+.standup-list {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.standup-card {
+  background: #ffffff;
+  border: 1px solid var(--border);
+  border-radius: 18px;
+  box-shadow: var(--shadow-soft);
+  overflow: hidden;
+}
+
+.standup-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 18px 22px;
+  border-bottom: 1px solid var(--border);
+  background: rgba(248, 250, 252, 0.6);
+}
+
+.standup-header h3 {
+  margin: 0;
+  font-size: 1rem;
+  font-weight: 700;
+}
+
+.standup-body {
+  padding: 22px;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.standup-section {
+  padding: 14px 18px;
+  border-radius: 12px;
+  background: rgba(248, 250, 252, 0.8);
+}
+
+.standup-label {
+  margin: 0 0 6px;
+  font-weight: 700;
+  font-size: 0.9rem;
+}
+
+.standup-section p:last-child {
+  margin: 0;
+  color: #475569;
+  font-size: 0.9rem;
+}

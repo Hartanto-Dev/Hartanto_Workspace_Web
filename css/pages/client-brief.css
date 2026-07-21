@@ -1,0 +1,58 @@
+.brief-list {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+  background: #ffffff;
+  border-radius: 18px;
+  border: 1px solid var(--border);
+  box-shadow: var(--shadow-soft);
+  overflow: hidden;
+}
+
+.brief-card {
+  display: flex;
+  align-items: center;
+  gap: 18px;
+  padding: 20px 22px;
+  transition: background var(--transition);
+}
+
+.brief-card:hover {
+  background: rgba(248, 250, 252, 0.9);
+}
+
+.brief-icon {
+  width: 44px;
+  height: 44px;
+  border-radius: 12px;
+  display: grid;
+  place-items: center;
+  background: rgba(248, 250, 252, 0.9);
+  flex-shrink: 0;
+}
+
+.brief-icon i {
+  width: 22px;
+  height: 22px;
+}
+
+.brief-info {
+  flex: 1;
+}
+
+.brief-info h3 {
+  margin: 0 0 4px;
+  font-size: 1rem;
+  font-weight: 700;
+}
+
+.brief-info p {
+  margin: 0 0 6px;
+  color: #475569;
+  font-size: 0.875rem;
+}
+
+.brief-date {
+  color: var(--muted);
+  font-size: 0.8rem;
+}
