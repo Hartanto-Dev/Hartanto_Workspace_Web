@@ -12,6 +12,18 @@
   transition: transform var(--transition), box-shadow var(--transition), background var(--transition);
 }
 
+.btn-sm {
+  padding: 8px 14px;
+  font-size: 0.85rem;
+  border-radius: 10px;
+  gap: 6px;
+}
+
+.btn-sm i {
+  width: 16px;
+  height: 16px;
+}
+
 .pill-button {
   background: #ffffff;
   color: var(--text);
