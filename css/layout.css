@@ -262,7 +262,7 @@
 .topbar {
   display: flex;
   justify-content: space-between;
-  align-items: center;
+  align-items: flex-start;
   gap: 20px;
   position: relative;
 }
@@ -274,6 +274,7 @@
   font-size: 0.75rem;
   font-weight: 700;
   color: var(--primary-accent);
+  line-height: 1;
 }
 
 .topbar h1 {
@@ -281,6 +282,7 @@
   font-size: 1.75rem;
   font-weight: 700;
   letter-spacing: -0.02em;
+  line-height: 1.2;
 }
 
 .topbar-actions {
@@ -288,6 +290,7 @@
   align-items: center;
   gap: 12px;
   flex-wrap: wrap;
+  margin-top: 18px; /* Aligns top edge of actions with top edge of h1 */
 }
 
 .topbar-search {
