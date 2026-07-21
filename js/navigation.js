@@ -21,7 +21,8 @@ export function initNavigation() {
       htmlContent = pageCache.get(sectionName);
     } else {
       try {
-        const response = await fetch(`pages/${sectionName}.html`);
+        // Add cache buster to prevent browser from caching the fetch request
+        const response = await fetch(`pages/${sectionName}.html?t=${new Date().getTime()}`);
         if (!response.ok) throw new Error('Page not found');
         htmlContent = await response.text();
         pageCache.set(sectionName, htmlContent);
