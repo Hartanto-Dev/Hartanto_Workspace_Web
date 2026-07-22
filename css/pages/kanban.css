@@ -2,6 +2,7 @@
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
   gap: 20px;
+  align-items: start;
 }
 
 .dev-column {
@@ -65,6 +66,118 @@
 
 .dev-task-title {
   margin: 0;
+  font-weight: 700;
+  font-size: 0.95rem;
+  color: var(--text);
+  line-height: 1.4;
+}
+
+/* New Card Internal Structure */
+.task-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 2px;
+}
+
+.task-id {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 0.8rem;
   font-weight: 600;
-  font-size: 0.9rem;
+  color: var(--muted);
+}
+
+.task-id i {
+  width: 14px;
+  height: 14px;
+}
+
+.priority-tag {
+  display: inline-flex;
+  align-items: center;
+}
+
+.priority-tag i {
+  width: 12px;
+  height: 12px;
+  margin-right: 4px;
+}
+
+.task-body {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.task-category {
+  margin: 0;
+  font-size: 0.8rem;
+  color: var(--muted);
+}
+
+.task-due-date {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 0.75rem;
+  font-weight: 600;
+  color: var(--muted);
+  background: rgba(241, 245, 249, 0.8);
+  padding: 6px 10px;
+  border-radius: 6px;
+  width: fit-content;
+  margin-top: 4px;
+}
+
+.task-due-date i {
+  width: 12px;
+  height: 12px;
+}
+
+.task-footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 6px;
+  padding-top: 14px;
+  border-top: 1px solid var(--border);
+}
+
+.task-avatars {
+  display: flex;
+  align-items: center;
+}
+
+.task-avatars img {
+  width: 24px;
+  height: 24px;
+  border-radius: 50%;
+  border: 2px solid #fff;
+  margin-left: -8px;
+  background: var(--border);
+}
+
+.task-avatars img:first-child {
+  margin-left: 0;
+}
+
+.task-meta {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 0.75rem;
+  font-weight: 600;
+  color: var(--muted);
+}
+
+.task-meta i {
+  width: 14px;
+  height: 14px;
+}
+
+.meta-divider {
+  color: var(--border);
+  font-weight: 400;
 }

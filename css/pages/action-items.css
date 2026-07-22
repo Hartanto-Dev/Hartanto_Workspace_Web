@@ -65,9 +65,9 @@
   letter-spacing: 0.04em;
 }
 
-.priority-tag.high { color: #991b1b; background: rgba(239,68,68,0.12); }
-.priority-tag.medium { color: #92400e; background: rgba(245,158,11,0.12); }
-.priority-tag.low { color: #065f46; background: rgba(16,185,129,0.12); }
+.priority-tag.high { color: #334155; background: #e2e8f0; } /* Slate 700 / 200 */
+.priority-tag.medium { color: #475569; background: #f1f5f9; } /* Slate 600 / 100 */
+.priority-tag.low { color: #64748b; background: #f8fafc; border: 1px solid var(--border); } /* Slate 500 / 50 */
 
 .action-due {
   color: var(--muted);

@@ -1,5 +1,5 @@
-import { initSidebar } from './sidebar.js';
-import { initNavigation } from './navigation.js';
+import { initSidebar } from './sidebar.js?v=9';
+import { initNavigation } from './navigation.js?v=9';
 
 document.addEventListener('DOMContentLoaded', () => {
   // Initialize lucide icons globally

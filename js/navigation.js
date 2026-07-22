@@ -17,15 +17,11 @@ export function initNavigation() {
 
     let htmlContent = '';
 
-    if (pageCache.has(sectionName)) {
-      htmlContent = pageCache.get(sectionName);
-    } else {
-      try {
-        // Add cache buster to prevent browser from caching the fetch request
-        const response = await fetch(`pages/${sectionName}.html?t=${new Date().getTime()}`);
-        if (!response.ok) throw new Error('Page not found');
-        htmlContent = await response.text();
-        pageCache.set(sectionName, htmlContent);
+    try {
+      // Add cache buster to prevent browser from caching the fetch request
+      const response = await fetch(`pages/${sectionName}.html?t=${new Date().getTime()}`);
+      if (!response.ok) throw new Error('Page not found');
+      htmlContent = await response.text();
       } catch (error) {
         htmlContent = `
           <div style="padding: 40px; text-align: center;">
@@ -34,7 +30,6 @@ export function initNavigation() {
           </div>
         `;
       }
-    }
 
     // Wrap the loaded content in the page-section wrapper
     pageContainer.innerHTML = `<div class="page-section active" data-page="${sectionName}">${htmlContent}</div>`;
@@ -47,14 +42,17 @@ export function initNavigation() {
   };
 
   const initPageScripts = async (sectionName, container) => {
-    if (sectionName === 'all-meetings') {
+    if (sectionName === 'dashboard') {
+      const module = await import('./pages/dashboard.js?v=3');
+      module.initDashboard(container);
+    } else if (sectionName === 'all-meetings') {
       const module = await import('./pages/meetings.js');
       module.initMeetings(container);
     } else if (sectionName === 'action-items') {
       const module = await import('./pages/action-items.js');
       module.initActionItems(container);
     } else if (sectionName === 'reporting') {
-      const module = await import('./pages/reporting.js');
+      const module = await import('./pages/reporting.js?v=7');
       module.initReporting(container);
     }
   };
