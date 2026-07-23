@@ -17,7 +17,12 @@
     <div class="dev-task-card" draggable="true">
       <div class="task-header">
         <div class="task-id"><i data-lucide="link-2"></i> WEB - 21</div>
-        <span class="priority-tag high"><i data-lucide="flag"></i> Urgent</span>
+        <div class="task-header-right" style="display: flex; align-items: center; gap: 8px;">
+          <span class="priority-tag high"><i data-lucide="flag"></i> Urgent</span>
+          <button class="delete-task-btn" aria-label="Delete task" style="background: none; border: none; cursor: pointer; padding: 2px; color: #ef4444; opacity: 0.6; transition: opacity 0.2s; display: inline-flex; align-items: center; justify-content: center;">
+            <i data-lucide="trash-2" style="width: 14px; height: 14px;"></i>
+          </button>
+        </div>
       </div>
       <div class="task-body">
         <p class="dev-task-title">Partone Consultancy Website</p>
@@ -41,7 +46,12 @@
     <div class="dev-task-card" draggable="true">
       <div class="task-header">
         <div class="task-id"><i data-lucide="link-2"></i> WEB - 68</div>
-        <span class="priority-tag medium"><i data-lucide="flag"></i> Medium</span>
+        <div class="task-header-right" style="display: flex; align-items: center; gap: 8px;">
+          <span class="priority-tag medium"><i data-lucide="flag"></i> Medium</span>
+          <button class="delete-task-btn" aria-label="Delete task" style="background: none; border: none; cursor: pointer; padding: 2px; color: #ef4444; opacity: 0.6; transition: opacity 0.2s; display: inline-flex; align-items: center; justify-content: center;">
+            <i data-lucide="trash-2" style="width: 14px; height: 14px;"></i>
+          </button>
+        </div>
       </div>
       <div class="task-body">
         <p class="dev-task-title">Design Wireframes - Homepage</p>
@@ -67,7 +77,12 @@
     <div class="dev-task-card" draggable="true">
       <div class="task-header">
         <div class="task-id"><i data-lucide="link-2"></i> WEB - 28</div>
-        <span class="priority-tag high"><i data-lucide="flag"></i> Urgent</span>
+        <div class="task-header-right" style="display: flex; align-items: center; gap: 8px;">
+          <span class="priority-tag high"><i data-lucide="flag"></i> Urgent</span>
+          <button class="delete-task-btn" aria-label="Delete task" style="background: none; border: none; cursor: pointer; padding: 2px; color: #ef4444; opacity: 0.6; transition: opacity 0.2s; display: inline-flex; align-items: center; justify-content: center;">
+            <i data-lucide="trash-2" style="width: 14px; height: 14px;"></i>
+          </button>
+        </div>
       </div>
       <div class="task-body">
         <p class="dev-task-title">Modify Content for Homepage</p>
@@ -94,7 +109,12 @@
     <div class="dev-task-card" draggable="true">
       <div class="task-header">
         <div class="task-id"><i data-lucide="link-2"></i> WEB - 12</div>
-        <span class="priority-tag low"><i data-lucide="flag"></i> Low</span>
+        <div class="task-header-right" style="display: flex; align-items: center; gap: 8px;">
+          <span class="priority-tag low"><i data-lucide="flag"></i> Low</span>
+          <button class="delete-task-btn" aria-label="Delete task" style="background: none; border: none; cursor: pointer; padding: 2px; color: #ef4444; opacity: 0.6; transition: opacity 0.2s; display: inline-flex; align-items: center; justify-content: center;">
+            <i data-lucide="trash-2" style="width: 14px; height: 14px;"></i>
+          </button>
+        </div>
       </div>
       <div class="task-body">
         <p class="dev-task-title">MTC Design Approval</p>
@@ -118,7 +138,12 @@
     <div class="dev-task-card" draggable="true">
       <div class="task-header">
         <div class="task-id"><i data-lucide="link-2"></i> WEB - 97</div>
-        <span class="priority-tag medium"><i data-lucide="flag"></i> Medium</span>
+        <div class="task-header-right" style="display: flex; align-items: center; gap: 8px;">
+          <span class="priority-tag medium"><i data-lucide="flag"></i> Medium</span>
+          <button class="delete-task-btn" aria-label="Delete task" style="background: none; border: none; cursor: pointer; padding: 2px; color: #ef4444; opacity: 0.6; transition: opacity 0.2s; display: inline-flex; align-items: center; justify-content: center;">
+            <i data-lucide="trash-2" style="width: 14px; height: 14px;"></i>
+          </button>
+        </div>
       </div>
       <div class="task-body">
         <p class="dev-task-title">Nexa Components Revision</p>
@@ -151,3 +176,32 @@
     </button>
   </div>
 </div>
+
+<div class="dashboard-two-columns" style="margin-top: 24px;">
+  <div class="dashboard-widget-container" id="report-summary-widget" style="display: block; padding: 24px; align-items: start; justify-content: start;">
+    <div class="dashboard-box-header" style="display: flex; align-items: center; justify-content: space-between; margin-bottom: 16px; width: 100%; border-bottom: 1px solid var(--border); padding-bottom: 16px;">
+      <div style="display: flex; align-items: center; gap: 8px;">
+        <i data-lucide="pie-chart" style="width: 20px; height: 20px;"></i>
+        <h3 style="margin: 0; font-size: 1.05rem; font-weight: 700; color: var(--foreground);">Report Summary</h3>
+      </div>
+    </div>
+    <div id="report-summary-content" style="width: 100%; min-height: 200px; display: flex; flex-direction: column; align-items: center; justify-content: center; color: var(--muted); font-size: 0.9rem;">
+      <i data-lucide="inbox" style="width: 32px; height: 32px; margin-bottom: 10px; color: var(--muted);"></i>
+      No summary data available
+    </div>
+  </div>
+  
+  <div class="dashboard-widget-container" style="display: block; padding: 24px; align-items: start; justify-content: start;">
+    <div class="dashboard-box-header" style="display: flex; align-items: center; justify-content: space-between; margin-bottom: 16px; width: 100%; border-bottom: 1px solid var(--border); padding-bottom: 16px;">
+      <div style="display: flex; align-items: center; gap: 8px;">
+        <i data-lucide="activity" style="width: 20px; height: 20px;"></i>
+        <h3 style="margin: 0; font-size: 1.05rem; font-weight: 700; color: var(--foreground);">Recent Activity</h3>
+      </div>
+    </div>
+    <div style="width: 100%; min-height: 200px; display: flex; flex-direction: column; align-items: center; justify-content: center; color: var(--muted); font-size: 0.9rem;">
+      <i data-lucide="clock" style="width: 32px; height: 32px; margin-bottom: 10px; color: var(--muted);"></i>
+      No recent activity to display
+    </div>
+  </div>
+</div>
+

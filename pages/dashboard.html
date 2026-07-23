@@ -44,32 +44,41 @@
 </div>
 
 <div class="dashboard-two-columns">
-  <div class="dashboard-widget-container" id="github-calendar-widget" style="display: block; padding: 24px; align-items: start; justify-content: start;">
-    <div class="dashboard-box-header" style="display: flex; align-items: center; justify-content: space-between; margin-bottom: 16px; width: 100%; border-bottom: 1px solid var(--border); padding-bottom: 16px;">
+  <div class="dashboard-widget-container" id="github-calendar-widget"
+    style="display: block; padding: 24px; align-items: start; justify-content: start;">
+    <div class="dashboard-box-header"
+      style="display: flex; align-items: center; justify-content: space-between; margin-bottom: 16px; width: 100%; border-bottom: 1px solid var(--border); padding-bottom: 16px;">
       <div style="display: flex; align-items: center; gap: 8px;">
         <i data-lucide="github" style="width: 20px; height: 20px;"></i>
         <h3 style="margin: 0; font-size: 1.05rem; font-weight: 700; color: var(--foreground);">GitHub Contributions</h3>
       </div>
       <span class="badge blue">Real-time</span>
     </div>
-    <div class="calendar" style="width: 100%; min-height: 200px; display: flex; flex-direction: column; align-items: center; justify-content: center;">
+    <div class="calendar"
+      style="width: 100%; min-height: 200px; display: flex; flex-direction: column; align-items: center; justify-content: center;">
       <!-- Loading stuff -->
-      <i data-lucide="loader-2" style="animation: spin 1s linear infinite; width: 32px; height: 32px; color: var(--primary-accent); margin-bottom: 10px;"></i>
+      <i data-lucide="loader-2"
+        style="animation: spin 1s linear infinite; width: 32px; height: 32px; color: var(--primary-accent); margin-bottom: 10px;"></i>
       <span style="color: var(--muted); font-size: 0.9rem;">Fetching contributions for Hartanto-Dev...</span>
     </div>
-    
+
     <!-- Recent Commit Info -->
-    <div id="github-recent-activity" style="margin-top: 16px; padding-top: 16px; border-top: 1px solid var(--border); width: 100%; display: flex; align-items: center; gap: 14px;">
-       <div class="activity-icon" style="background: rgba(16, 185, 129, 0.1); color: var(--green); width: 40px; height: 40px; border-radius: 10px; display: flex; align-items: center; justify-content: center; flex-shrink: 0;">
-         <i data-lucide="git-commit" style="width: 20px; height: 20px;"></i>
-       </div>
-       <div style="flex: 1; min-width: 0;">
-         <p id="commit-text" style="margin: 0; font-size: 0.85rem; color: var(--muted);">Telah melakukan Commit pada Repository...</p>
-         <p id="commit-repo" style="margin: 2px 0 0; font-size: 0.95rem; font-weight: 600; color: var(--foreground); white-space: nowrap; overflow: hidden; text-overflow: ellipsis;">Memuat data...</p>
-       </div>
-       <a id="commit-link" href="#" target="_blank" class="icon-button" style="display: none;" aria-label="View commit">
-         <i data-lucide="external-link" style="width: 18px; height: 18px; color: var(--muted);"></i>
-       </a>
+    <div id="github-recent-activity"
+      style="margin-top: 16px; padding-top: 16px; border-top: 1px solid var(--border); width: 100%; display: flex; align-items: center; gap: 14px;">
+      <div class="activity-icon"
+        style="background: rgba(16, 185, 129, 0.1); color: var(--green); width: 40px; height: 40px; border-radius: 10px; display: flex; align-items: center; justify-content: center; flex-shrink: 0;">
+        <i data-lucide="git-commit" style="width: 20px; height: 20px;"></i>
+      </div>
+      <div style="flex: 1; min-width: 0;">
+        <p id="commit-text" style="margin: 0; font-size: 0.85rem; color: var(--muted);">Telah melakukan Commit pada
+          Repository...</p>
+        <p id="commit-repo"
+          style="margin: 2px 0 0; font-size: 0.95rem; font-weight: 600; color: var(--foreground); white-space: nowrap; overflow: hidden; text-overflow: ellipsis;">
+          Memuat data...</p>
+      </div>
+      <a id="commit-link" href="#" target="_blank" class="icon-button" style="display: none;" aria-label="View commit">
+        <i data-lucide="external-link" style="width: 18px; height: 18px; color: var(--muted);"></i>
+      </a>
     </div>
   </div>
   <div class="dashboard-widget-container empty-placeholder"></div>
